@@ -1,3 +1,4 @@
+
 const loginForm = document.getElementById('welcome-form');
 const messagesSection = document.getElementById('messages-section');
 const messagesList = document.getElementById('messages-list');
@@ -8,11 +9,13 @@ const messageContentInput = document.getElementById('message-content');
 let userName = '';
 
 const login= event => {
-  event.preventDefault;
+  console.log('start login')
+  event.preventDefault();
   if(!userNameInput.value){
     alert('You have to log in');
   } else {
     userName = userNameInput.value;
+    console.log('userName',userName);
     loginForm.classList.remove('show');
     messagesSection.classList.add('show');
   }
@@ -33,7 +36,7 @@ const addMessage = (user, text) => {
 };
 
 const sendMessage = event => {
-  event.preventDefault;
+  event.preventDefault();
   if(!messageContentInput.value) {
     alert('You have to write something');
   } else {
