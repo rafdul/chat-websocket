@@ -79,8 +79,8 @@ p {
 }
 
 .message--received {
-    animation: fadeIn;
-    animation-duration: 3s;
+  animation: fadeIn;
+  animation-duration: 3s;
 }
 
 .message__author {
@@ -98,6 +98,15 @@ p {
   color: #fff;
   font-size: 0.9rem;
   max-width: 200px;
+}
+
+.message--bot .message__author {
+  font-style: italic;
+}
+
+.message--bot .message__content {
+  background: rgb(189, 180, 180);
+  color:rgb(88, 92, 99);
 }
 
 .message--self .message__content {
